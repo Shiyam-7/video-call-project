@@ -24,7 +24,7 @@ export function MeetingPage() {
     const roomId = params.roomId;
 
     useEffect(() => {
-      const s = socketIO.connect("https://video-call-project-api.vercel.app");
+      const s = socketIO.connect("https://video-call-project-api.vercel.app/");
       s.on("connect", () => {
         setSocket(s);
         s.emit("join", {
