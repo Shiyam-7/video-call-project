@@ -25,6 +25,7 @@ export function MeetingPage() {
 
     useEffect(() => {
       const s = socketIO.connect("https://video-call-project-api.vercel.app/");
+     console.log("hi")
       s.on("connect", () => {
         setSocket(s);
         s.emit("join", {
