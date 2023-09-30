@@ -1,4 +1,5 @@
 const express = require('express');
+const cors=require('cors');
 const app = express();
 const http = require('http');
 const server = http.createServer(app);
@@ -9,7 +10,6 @@ const io = new Server(server, {
   }
 });
 
-const cors=require('cors');
 app.use(cors());
 
 const port = process.env.PORT || 3000;
