@@ -9,6 +9,9 @@ const io = new Server(server, {
   }
 });
 
+const cors=require('cors');
+app.use(cors());
+
 const port = process.env.PORT || 3000;
 server.listen(port, () => {
   console.log('listening on *:port');
