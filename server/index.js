@@ -9,8 +9,8 @@ const io = new Server(server, {
   }
 });
 
-server.listen(8080, () => {
-  console.log('listening on *:3001');
+server.listen(PORT, () => {
+  console.log('listening on *:PORT');
 });
 
 app.get('/', (req, res) => {
