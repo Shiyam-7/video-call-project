@@ -13,6 +13,11 @@ server.listen(8080, () => {
   console.log('listening on *:3001');
 });
 
+app.get('/', (req, res) => {
+  res.send("hey there")
+});
+
+
 const rooms = {};
 const users = {};
 
