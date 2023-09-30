@@ -21,18 +21,18 @@ export function MeetingPage() {
     const [remoteVideoStream, setRemoteVideoStream] = useState();
     
     const params = useParams();
-    const roomId = params.roomId;
+    const roomId = params.roomID;
 
     useEffect(() => {
      console.log("hi",params);
-     console.log(roomId);
+     console.log(roomID);
       const s = socketIO.connect("https://video-call-project-api.vercel.app");
      console.log("hi");
       s.on("connect", () => {
         setSocket(s);
        console.log(roomID);
         s.emit("join", {
-          roomId,
+          roomID,
         });
 
         window.navigator.mediaDevices
@@ -94,7 +94,7 @@ export function MeetingPage() {
             <CentralizedCard>
                 <div>
                     <Typography textAlign={"center"} variant="h5">
-                        Hi welcome to meeting {roomId}.
+                        Hi welcome to meeting {roomID}.
                     </Typography>
                 </div>
                 <br/><br/>
