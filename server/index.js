@@ -6,14 +6,11 @@ const server = http.createServer(app);
 const { Server } = require("socket.io");
 const io = new Server(server, {
   cors: {
-    origin: ["*"],
-    handlePreflightRequest: (req, res) => {
-    res .writeHead(200,{
-    "Access-Control-Allow-Origin" :"*",
-    "Access-Control-Allow-Methods" : "GET, POST"
-    });
-    res.end();
-  }}
+origin: "*",
+methods: ["GET", "POST"],
+allowedHeaders: ["*"],
+credentials: true
+}
 });
 
 app.use(cors());
