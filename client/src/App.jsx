@@ -7,7 +7,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="https://video-call-project-client.vercel.app/meeting/:roomId" element={<MeetingPage />} />
+        <Route path="/meeting/:roomId" element={<MeetingPage />} />
         <Route path="*" element={<LandingPage />} />
       </Routes>
     </Router>
