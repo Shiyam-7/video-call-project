@@ -21,7 +21,7 @@ export function MeetingPage() {
     const [remoteVideoStream, setRemoteVideoStream] = useState();
     
     const params = useParams();
-    const roomId = params.roomID;
+    const roomID = params.roomID;
 
     useEffect(() => {
      console.log("hi",params);
