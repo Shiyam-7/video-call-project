@@ -1,7 +1,7 @@
 
 export function LandingPage() {
     return <div>
-        condole.log("hi")
+        condole.log("hi");
         Hi welcome to landing page
     </div>
 }
