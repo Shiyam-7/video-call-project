@@ -30,7 +30,7 @@ export function MeetingPage() {
      console.log("hi");
       s.on("connect", () => {
         setSocket(s);
-       console.log(roomId);
+       console.log(roomID);
         s.emit("join", {
           roomId,
         });
