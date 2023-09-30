@@ -7,7 +7,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/meeting/:roomId" element={<MeetingPage />} />
+        <Route path="/meeting" element={<MeetingPage />} />
         <Route path="*" element={<LandingPage />} />      
         </Routes>
     </Router>
